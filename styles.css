@@ -1,0 +1,599 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Top red bar */
+.top-bar {
+    background-color: #7f0e0e;
+    height: 20px;
+}
+
+/* Header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.logo img {
+    height: auto;
+    max-width: 100%;
+}
+
+.title {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 21px;
+    font-family: 'Baskervville SC', serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icons i {
+    font-size: 1.2vw;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+}
+
+/* Content Split Section */
+.content {
+    display: flex;
+    height: 80vh;
+    background-color: white;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    text-align: left;
+    border-right: 1px solid black;
+}
+
+.left-column ol {
+    list-style: none;
+    font-size: 37px;
+    line-height: 0.9;
+    margin: 0;
+    padding: 0;
+}
+
+.left-column li {
+    counter-increment: list;
+}
+
+.left-column li::before {
+    content: counter(list) ".";
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.left-column a {
+    text-decoration: none;
+    color: black;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 0;
+    height: 100%; 
+}
+
+.right-column img {
+    object-fit: cover; 
+}
+
+
+.fragrance-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Red Splitter Section */
+.splitter {
+    width: 100%;
+    height: 19px;
+    background-color: #b21e1e;
+}
+
+
+/* Perfume Grid Section */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid #000;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+    gap: 0; /* Removed gap between items */
+}
+
+/* Grid Items */
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.item img {
+    width: 180px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.text-container {
+    border-top: 1px solid black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: auto;
+    padding-left: 2px;
+    width: 100%;
+}
+
+.text-container p {
+    font-family: "Sometype Mono", monospace;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+    padding: 0 5px;
+}
+
+/* Video Section */
+.video-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+/* Full-width Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 20px 0;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+/* Footer */
+.footer-top {
+    background-color: #a32121;
+    border: 1px solid black;
+    padding: 13px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.footer-top p {
+    flex-grow: 1;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 8px;
+    color: white;
+}
+
+.subscribe-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.subscribe-box input[type="email"],
+.subscribe-box button {
+    background-color: transparent;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    font-family: 'Sometype Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    width: 130px;
+}
+
+.subscribe-box input[type="email"]::placeholder {
+    color: #fff;
+}
+
+.subscribe-box button {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    width: 100px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+    font-family: 'Baskervville SC', serif;
+}
+
+.footer-left img {
+    height: 35px;
+    width: 50px;
+}
+
+.footer-left p {
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-links {
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Payment Icons Section with Full-Width Border on Top */
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #000;
+    width: 100%;
+}
+
+.payment-icons img {
+    max-width: 30px;
+    display: inline-block;
+}
+
+/* SHOP PAGE CSS / PERFUME GRIDS FOR SHOP */
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    color: #333; 
+    margin-left: 12px; 
+    margin-top: 20px; 
+    margin-bottom: 17px; 
+
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Grid Items */
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.25px solid black; 
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.shop-item img {
+    max-width: 70%; 
+    height: 600px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+.shop-text-container {
+    border-top: 0.25px solid black; 
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: auto;
+    padding-left: 2px;
+    width: 100%;
+}
+
+.shop-text-container p {
+    font-family: "Sometype Mono", monospace;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+    padding: 0 5px;
+}
+
+
+/* ABOUT US PAGE CSS */
+.about-us {
+    text-align: left;
+    font-weight: normal;
+}
+
+.about-us h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-us p {
+    font-family: 'Rajdhani', sans-serif;
+    color: #333;
+    margin-left: 13px;
+    margin-right: 20px;
+}
+
+.extra-space {
+    margin-bottom: 20px; 
+}
+
+.end-space {
+    margin-bottom: 200px; 
+}
+
+/* Video Section */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+    border: none; 
+}
+
+.video-section video {
+    width: 100vw; 
+    height: auto; 
+    border: none; 
+    margin: 0;
+    padding: 0;
+    object-fit: cover; 
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* 1200px and below (Large Tablets and Small Desktops) */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .icons i {
+        font-size: 24px; /* Default size for larger screens */
+    }
+    
+    .shop-item img {
+        height: 500px; /* Adjusting image height for medium screens */
+    }
+    
+    .left-column ol {
+        font-size: 30px; /* Adjust text size */
+    }
+
+    .video-section video {
+        max-width: 100%;
+    }
+}
+
+/* 768px and below (Tablets and small screens) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo {
+        width: auto;
+        height: 80px; /* Set a default height */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        border-right: none;
+    }
+
+    .right-column {
+        height: auto; 
+    }
+
+    .fragrance-image {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-container {
+        padding: 0; 
+        margin: 0;
+    }fragrance-image {
+        height: 50%; 
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .left-column ol {
+        font-size: 22px; 
+    }
+
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .shop-item img {
+        height: 400px; 
+    }
+
+    .video-section video {
+        max-width: 100%;
+    }
+}
+
+/* 480px and below (Mobile Phones) */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .shop-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        height: 40px; 
+        width: auto; 
+    }
+    
+    .icons i {
+        font-size: 32px;
+    }
+
+    .title h1 {
+        font-size: 16px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+
+    .left-column ol {
+        font-size: 18px; 
+    }
+
+    .shop-item img {
+        height: 300px; 
+        width: 80%;
+    }
+    
+    .right-column {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .right-column img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+
+
+
